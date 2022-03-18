@@ -71,7 +71,8 @@ client.on('messageCreate', async message => {
 })
 
 const status = queue =>
-  `Volume: \`${queue.volume}%\` | Filter: \`${queue.filters.join(', ') || 'Off'}\` | Loop: \`${
+/*  | Filter: \`${queue.filters.join(', ') || 'Off'}\` */
+  `Volume: \`${queue.volume}%\` | Loop: \`${
     queue.repeatMode ? (queue.repeatMode === 2 ? 'All Queue' : 'This Song') : 'Off'
   }\` | Autoplay: \`${queue.autoplay ? 'On' : 'Off'}\``
 client.distube

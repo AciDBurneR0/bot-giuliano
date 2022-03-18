@@ -1,10 +1,10 @@
 module.exports = {
-  name: 'repeat',
-  aliases: ['loop', 'rp'],
+  name: 'ripeti',
+  aliases: ['loop', 'ancora'],
   inVoiceChannel: true,
   run: async (client, message, args) => {
     const queue = client.distube.getQueue(message)
-    if (!queue) return message.channel.send(`${client.emotes.error} | There is nothing playing!`)
+    if (!queue) return message.channel.send(`${client.emotes.error} | Nun ce sta 'cazzo che te ripeto?`)
     let mode = null
     switch (args[0]) {
       case 'off':
@@ -18,7 +18,7 @@ module.exports = {
         break
     }
     mode = queue.setRepeatMode(mode)
-    mode = mode ? (mode === 2 ? 'Repeat queue' : 'Repeat song') : 'Off'
-    message.channel.send(`${client.emotes.repeat} | Set repeat mode to \`${mode}\``)
+    mode = mode ? (mode === 2 ? 'Ripeti queue' : 'Ripeti canzone') : 'Off'
+    message.channel.send(`${client.emotes.repeat} | Sto a mette er loop a \`${mode}\``)
   }
 }
