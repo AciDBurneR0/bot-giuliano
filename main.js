@@ -102,7 +102,7 @@ client.distube
   .on('searchNoResult', (message, query) =>
     message.channel.send(`${client.emotes.error} | No result found for \`${query}\`!`)
   )
-  .on('finish', queue => queue.textChannel.send('Finished!'))
+  .on('finish', queue => queue.textChannel.send('Ho finito, se hai apprezzato lasciame du spicci!'))
 
 //Sopra logiche per music bot
 

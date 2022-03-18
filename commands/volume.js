@@ -6,8 +6,8 @@ module.exports = {
     const queue = client.distube.getQueue(message)
     if (!queue) return message.channel.send(`${client.emotes.error} | Che t'abbasso, sto cazzo t'abbasso!`)
     const volume = parseInt(args[0])
-    if (isNaN(volume)) return message.channel.send(`${client.emotes.error} | MA li mortacci tua damme un valore normale!`)
+    if (isNaN(volume)) return message.channel.send(`${client.emotes.error} | Ma li mortacci tua damme un valore normale!`)
     queue.setVolume(volume)
-    message.channel.send(`${client.emotes.success} | Le casse stanno settate al \`${volume}\``)
+    message.channel.send(`${client.emotes.success} | Le casse stanno settate al \`${volume}\`%`)
   }
 }
