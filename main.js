@@ -57,7 +57,7 @@ client.on("messageCreate", (message) => {
   } else if (userRequest.includes("chi sono")) {
     botResponse.send(
       `Tu dovresti essere quello stronzo rotto n'culo de ${message.author.username}`, 
-      `${message.author.id}`
+      `${message.author.iconURL}`
     );
     /* setTimeout(() => {
       botResponse.send('E non me lo chiedere mai più');
