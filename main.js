@@ -11,6 +11,8 @@ const micheleDragonetti =
 
 const tette = new MessageAttachment("https://i.imgur.com/boBU6CD.jpeg");
 
+const magname = new MessageAttachment("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL3eoHBt6GSfRx6VNWNvDlV9ZAiOaQ2iqzUQ&usqp=CAU");
+
 const reponseToManuel = [
   "Te devi sta zitto",
   "Hai rotto er cazzo",
@@ -77,6 +79,8 @@ client.on("messageCreate", (message) => {
   ) {
     console.log("inside if");
     message.channel.send({ files: [tette] });
+  }else if(userRequest === 'magname er cazzo'){
+    message.channel.send({ files: [magname] });
   }
 });
 
