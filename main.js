@@ -11,7 +11,7 @@ const micheleDragonetti =
 
 const tette = new MessageAttachment("https://i.imgur.com/boBU6CD.jpeg");
 
-const magname = new MessageAttachment("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL3eoHBt6GSfRx6VNWNvDlV9ZAiOaQ2iqzUQ&usqp=CAU");
+const magname = new MessageAttachment("https://i.imgur.com/6borFvZ.gif");
 
 const reponseToManuel = [
   "Te devi sta zitto",
