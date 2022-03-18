@@ -13,6 +13,8 @@ const tette = new MessageAttachment("https://i.imgur.com/boBU6CD.jpeg");
 
 const magname = new MessageAttachment("https://i.imgur.com/6borFvZ.gif");
 
+const fabrizio = new MessageAttachment("https://photos.google.com/search/_tra_/photo/AF1QipMQUjYScEj3i6S4dMy54Zi9VKNQizdYt28kEGFU");
+
 const reponseToManuel = [
   "Te devi sta zitto",
   "Hai rotto er cazzo",
@@ -77,6 +79,8 @@ client.on("messageCreate", (message) => {
     message.channel.send({ files: [magname] });
   }else if(userRequest === 'Magname er cazzo'){
     message.channel.send({ files: [magname] });
+  }else if(message.author.username === "Warcharoth"){
+    message.channel.send({files: [fabrizio]})
   }
 });
 
