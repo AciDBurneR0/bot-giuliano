@@ -13,7 +13,7 @@ const tette = new MessageAttachment("https://i.imgur.com/boBU6CD.jpeg");
 
 const magname = new MessageAttachment("https://i.imgur.com/6borFvZ.gif");
 
-const fabrizio = new MessageAttachment("https://photos.google.com/search/_tra_/photo/AF1QipMQUjYScEj3i6S4dMy54Zi9VKNQizdYt28kEGFU");
+const fabrizio = new MessageAttachment("https://static.wixstatic.com/media/b7a07a_1877b81e5f3f4b63a612e39e221a7fed~mv2.jpg");
 
 const reponseToManuel = [
   "Te devi sta zitto",
