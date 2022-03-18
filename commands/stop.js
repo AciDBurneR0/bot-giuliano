@@ -1,11 +1,11 @@
 module.exports = {
-  name: 'stop',
-  aliases: ['disconnect', 'leave'],
+  name: 'fermete',
+  aliases: ['fermo', 'ba'],
   inVoiceChannel: true,
   run: async (client, message) => {
     const queue = client.distube.getQueue(message)
-    if (!queue) return message.channel.send(`${client.emotes.error} | There is nothing in the queue right now!`)
+    if (!queue) return message.channel.send(`${client.emotes.error} | Ma che cazzo dici che nun sto a sona gniente`)
     queue.stop()
-    message.channel.send(`${client.emotes.success} | Stopped!`)
+    message.channel.send(`${client.emotes.success} | Me so fermato, stabbono!`)
   }
 }
