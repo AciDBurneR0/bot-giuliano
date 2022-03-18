@@ -1,11 +1,11 @@
 module.exports = {
-  name: 'resume',
-  aliases: ['resume', 'unpause'],
+  name: 'riprendi',
+  aliases: ['resume', 'ricomincia'],
   inVoiceChannel: true,
   run: async (client, message) => {
     const queue = client.distube.getQueue(message)
-    if (!queue) return message.channel.send(`${client.emotes.error} | There is nothing in the queue right now!`)
+    if (!queue) return message.channel.send(`${client.emotes.error} | Ricomincio a scopamme tu madre? :)`)
     queue.resume()
-    message.channel.send('Resumed the song for you :)')
+    message.channel.send('Daje ricomincio a canta!')
   }
 }

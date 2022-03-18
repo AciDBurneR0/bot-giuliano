@@ -1,10 +1,10 @@
 module.exports = {
-  name: 'shuffle',
+  name: 'mischia',
   inVoiceChannel: true,
   run: async (client, message) => {
     const queue = client.distube.getQueue(message)
-    if (!queue) return message.channel.send(`${client.emotes.error} | There is nothing in the queue right now!`)
+    if (!queue) return message.channel.send(`${client.emotes.error} | Le palle mie te mischio!`)
     queue.shuffle()
-    message.channel.send('Shuffled songs in the queue')
+    message.channel.send('Ho mischiato le canzoni')
   }
 }

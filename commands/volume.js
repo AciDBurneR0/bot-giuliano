@@ -8,6 +8,6 @@ module.exports = {
     const volume = parseInt(args[0])
     if (isNaN(volume)) return message.channel.send(`${client.emotes.error} | Ma li mortacci tua damme un valore normale!`)
     queue.setVolume(volume)
-    message.channel.send(`${client.emotes.success} | Le casse stanno settate al \`${volume}\`%`)
+    message.channel.send(`${client.emotes.success} |Casse settate al \`${volume}\`%`)
   }
 }
