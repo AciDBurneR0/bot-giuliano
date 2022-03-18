@@ -62,7 +62,7 @@ client.on("messageCreate", (message) => {
     /* setTimeout(() => {
       botResponse.send('E non me lo chiedere mai più');
     }, 5000); */
-  } else if (message.author.username === "Warcharoth2") {
+  } else if (message.author.username === "ElectriiX") {
     const randomMessage =
       reponseToManuel[Math.floor(Math.random() * reponseToManuel.length)];
     botResponse.send(randomMessage);
