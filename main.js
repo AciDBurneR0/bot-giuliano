@@ -56,9 +56,14 @@ client.on("messageCreate", (message) => {
     botResponse.send(`Il nome del server dovrebbe esse ${message.guild.name}`);
   } else if (userRequest.includes("chi sono")) {
     botResponse.send(
-      `Tu dovresti essere quello stronzo rotto n'culo de ${message.author.username}`, 
+      `Tu dovresti essere quello stronzo rotto n'culo de ${message.author.username}`
+    );
+
+    botResponse.send(
       `${message.author.iconURL}`
     );
+
+    console.log(`${message.author.iconURL}`);
     /* setTimeout(() => {
       botResponse.send('E non me lo chiedere mai più');
     }, 5000); */
