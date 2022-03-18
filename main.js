@@ -102,14 +102,13 @@ client.distube
   .on('searchNoResult', (message, query) =>
     message.channel.send(`${client.emotes.error} | No result found for \`${query}\`!`)
   )
-  .on('finish', queue => queue.textChannel.send('Ho finito, se hai apprezzato lasciame du spicci!'))
+  .on('finish', queue => queue.textChannel.send('Ho finito, mo fa er serio e lasciame na mancia!'))
 
 //Sopra logiche per music bot
 
 const prefix = "!";
 
-const micheleDragonetti =
-  "https://discord.com/channels/317372493620969474/773875188658995222/914600779887824926";
+const micheleDragonetti = "https://discord.com/channels/317372493620969474/773875188658995222/914600779887824926";
 
 const tette = new MessageAttachment("https://i.imgur.com/boBU6CD.jpeg");
 
@@ -183,7 +182,9 @@ client.on("messageCreate", (message) => {
     message.channel.send({ files: [magname] });
   }else if(message.author.username === "TheMeger10" && (userRequest.includes("fessa") || userRequest.includes("famiglia") || userRequest.includes("Famiglia") || userRequest.includes("Fessa"))){
     message.channel.send({files: [fabrizio]})
-  }
+  }/* else if(userRequest === 'michele dragonetti'){
+    message.channel.send({file: [micheleDragonetti]})
+  } */
 });
 
 client.login("OTU0MTI5NjIyNDcwMTMxNzEy.YjOodA.p76ftt_eO2u3fDmHCFA51q6jt7M");
