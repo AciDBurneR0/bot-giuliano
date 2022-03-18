@@ -56,7 +56,8 @@ client.on("messageCreate", (message) => {
     botResponse.send(`Il nome del server dovrebbe esse ${message.guild.name}`);
   } else if (userRequest.includes("chi sono")) {
     botResponse.send(
-      `Tu dovresti essere quello stronzo rotto n'culo de ${message.author.username}`
+      `Tu dovresti essere quello stronzo rotto n'culo de ${message.author.username}`, 
+      `${message.author.id}`
     );
     /* setTimeout(() => {
       botResponse.send('E non me lo chiedere mai più');
@@ -66,8 +67,8 @@ client.on("messageCreate", (message) => {
       reponseToManuel[Math.floor(Math.random() * reponseToManuel.length)];
     botResponse.send(randomMessage);
   } else if (
-    message.author.username === "Warcharoth" &&
-    userRequest.includes("tette")
+    message.author.username === "Bahamut14" &&
+    userRequest.includes("fessa")
   ) {
     console.log("inside if");
     message.channel.send({ files: [tette] });
