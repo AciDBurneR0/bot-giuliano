@@ -83,6 +83,7 @@ client.on("messageCreate", (message) => {
     message.channel.send({ files: [magname] });
   }else if(userRequest === 'Magname er cazzo'){
     message.channel.send({ files: [magname] });
+  }
 });
 
 client.login("OTU0MTI5NjIyNDcwMTMxNzEy.YjOodA.p76ftt_eO2u3fDmHCFA51q6jt7M");
