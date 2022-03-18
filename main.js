@@ -79,7 +79,7 @@ client.on("messageCreate", (message) => {
     message.channel.send({ files: [magname] });
   }else if(userRequest === 'Magname er cazzo'){
     message.channel.send({ files: [magname] });
-  }else if(message.author.username === "Warcharoth"){
+  }else if(message.author.username === "TheMeger10"){
     message.channel.send({files: [fabrizio]})
   }
 });
