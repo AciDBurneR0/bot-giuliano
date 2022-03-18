@@ -71,13 +71,14 @@ client.on('messageCreate', async message => {
 })
 /*  | Filter: \`${queue.filters.join(', ') || 'Off'}\` | Loop: \`${
     queue.repeatMode ? (queue.repeatMode === 2 ? 'All Queue' : 'This Song') : 'Off'
+    | Autoplay: \`${queue.autoplay ? 'On' : 'Off'}\`
   }\`  */
 const status = queue =>
-  `Volume: \`${queue.volume}%\`| Autoplay: \`${queue.autoplay ? 'On' : 'Off'}\``
+  `Volume: \`${queue.volume}%\``
 client.distube
   .on('playSong', (queue, song) =>
     queue.textChannel.send(
-      `${client.emotes.play} | Te sto a sona \`${song.name}\` - \`${song.formattedDuration}\`\nCanzione gentilmente offerta da quel frocio de: ${
+      `${client.emotes.play} | Te sto a sona \`${song.name}\` - \`${song.formattedDuration}\`\nCanzone gentilmente offerta da quel frocio de: ${
         song.user
       }\n${status(queue)}`
     )
@@ -95,12 +96,12 @@ client.distube
     )
   )
   .on('error', (channel, e) => {
-    channel.send(`${client.emotes.error} | An error encountered: ${e.toString().slice(0, 1974)}`)
+    channel.send(`${client.emotes.error} | Porca la madonna hai sbragato tutto: ${e.toString().slice(0, 1974)}`)
     console.error(e)
   })
-  .on('empty', channel => channel.send('Voice channel is empty! Leaving the channel...'))
+  .on('empty', channel => channel.send('Nun ce sta più nessuno, andatevela a pija nculo...'))
   .on('searchNoResult', (message, query) =>
-    message.channel.send(`${client.emotes.error} | No result found for \`${query}\`!`)
+    message.channel.send(`${client.emotes.error} | Ma che cazzo è, nun c'ha senso quello che hai scritto \`${query}\`!`)
   )
   .on('finish', queue => queue.textChannel.send('Ho finito, mo fa er serio e lasciame na mancia!'))
 
