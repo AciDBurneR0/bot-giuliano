@@ -69,12 +69,11 @@ client.on('messageCreate', async message => {
     message.channel.send(`${client.emotes.error} | Error: \`${e}\``)
   }
 })
-
-const status = queue =>
-/*  | Filter: \`${queue.filters.join(', ') || 'Off'}\` */
-  `Volume: \`${queue.volume}%\` | Loop: \`${
+/*  | Filter: \`${queue.filters.join(', ') || 'Off'}\` | Loop: \`${
     queue.repeatMode ? (queue.repeatMode === 2 ? 'All Queue' : 'This Song') : 'Off'
-  }\` | Autoplay: \`${queue.autoplay ? 'On' : 'Off'}\``
+  }\`  */
+const status = queue =>
+  `Volume: \`${queue.volume}%\`| Autoplay: \`${queue.autoplay ? 'On' : 'Off'}\``
 client.distube
   .on('playSong', (queue, song) =>
     queue.textChannel.send(
