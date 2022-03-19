@@ -1,6 +1,6 @@
-/* module.exports = {
+module.exports = {
   name: 'pausa',
-  aliases: ['fermete un secondo', 'hold'],
+  aliases: ['hold'],
   inVoiceChannel: true,
   run: async (client, message) => {
     const queue = client.distube.getQueue(message)
@@ -12,4 +12,4 @@
     queue.pause()
     message.channel.send('Me fermo nattimo')
   }
-} */
+}
