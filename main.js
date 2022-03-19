@@ -55,7 +55,7 @@ client.on('ready', () => {
 })
 
 client.on('messageCreate', async message => {
-  if(message.author.username != "Warcharoth"){
+  if(message.author.username != "ElectriiX" && message.author.username != "TheMeger10"){
   if (message.author.bot || !message.guild) return
   const prefix = config.prefix
   if (!message.content.startsWith(prefix)) return
