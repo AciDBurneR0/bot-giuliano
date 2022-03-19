@@ -1,4 +1,4 @@
-module.exports = {
+/* module.exports = {
   name: 'pausa',
   aliases: ['fermete un secondo', 'hold'],
   inVoiceChannel: true,
@@ -12,4 +12,4 @@ module.exports = {
     queue.pause()
     message.channel.send('Me fermo nattimo')
   }
-}
+} */

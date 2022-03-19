@@ -9,15 +9,17 @@
   "author": "Warcharoth",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/voice": "^0.8.0",
     "@distube/soundcloud": "^1.1.0",
     "@distube/spotify": "^1.2.1",
     "@distube/yt-dlp": "^1.0.2",
     "discord.js": "^13.6.0",
     "distube": "^3.3.2",
-    "ffmpeg-static": "^4.4.1",
-    "@discordjs/opus": "^0.7.0",
-    "@discordjs/voice": "^0.8.0",
     "eslint-config-prettier": "^8.3.0",
-    "libsodium-wrappers": "^0.7.9"
+    "ffmpeg-static": "^4.4.1",
+    "libsodium-wrappers": "^0.7.9",
+    "opusscript": "^0.0.8",
+    "tweetnacl": "^1.0.3"
   }
 }

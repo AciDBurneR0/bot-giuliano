@@ -1,6 +1,11 @@
 const { Client, Intents, MessageAttachment } = require("discord.js");
+const { joinVoiceChannel, createAudioResource } = require('@discordjs/voice');
+const voiceDiscord = require('@discordjs/voice');
 const Discord = require('discord.js');
-const { DisTube } = require('distube')
+const { DisTube } = require('distube');
+const { createAudioPlayer } = require('@discordjs/voice');
+const resource = createAudioResource('/sounds/soundBusted.mp3');
+const player = createAudioPlayer();
 const client = new Client({
   intents: [
     Intents.FLAGS.GUILDS, 
@@ -15,7 +20,6 @@ const { SpotifyPlugin } = require('@distube/spotify')
 const { SoundCloudPlugin } = require('@distube/soundcloud')
 const { YtDlpPlugin } = require('@distube/yt-dlp')
 //
-
 client.config = require('./config.json')
 client.distube = new DisTube(client, {
   leaveOnStop: false,
@@ -105,6 +109,39 @@ client.distube
   )
   .on('finish', queue => queue.textChannel.send('Ho finito, mo fa er serio e lasciame na mancia!'))
 
+
+  /* LOGICHE PER SOUNDBOARD */
+
+  /* client.on('messageCreate', async message => {
+    function isCommand(message){
+      return !!message.content.toLowerCase().startsWith(message);
+    };
+
+    if(isCommand('soundboard')){
+      const channel = message.member.voice.channel
+  
+      const player = voiceDiscord.createAudioPlayer('/sounds/soundBusted.mp3');
+      const resource = voiceDiscord.createAudioResource();
+  
+      const connection = voiceDiscord.joinVoiceChannel({
+        channelId: channel.id,
+        guildId: message.guild.id,
+        adapterCreator: message.guild.adapterCreator,
+      });
+  
+      player.play();
+      connection.subscribe(player)
+    }
+  }) */
+
+
+  
+
+
+  /* LOGICHE PER SOUNDBOARD */
+
+
+
 //Sopra logiche per music bot
 
 const prefix = "!";
@@ -116,7 +153,7 @@ const tette = new MessageAttachment("https://i.imgur.com/boBU6CD.jpeg");
 const magname = new MessageAttachment("https://i.imgur.com/6borFvZ.gif");
 
 const fabrizio = new MessageAttachment("https://static.wixstatic.com/media/b7a07a_1877b81e5f3f4b63a612e39e221a7fed~mv2.jpg");
-
+const sound1 = "https://www.101soundboards.com/sounds/51222-gotcha";
 const reponseToManuel = [
   "Te devi sta zitto",
   "Hai rotto er cazzo",
@@ -183,7 +220,12 @@ client.on("messageCreate", (message) => {
     message.channel.send({ files: [magname] });
   }else if(message.author.username === "TheMeger10" && (userRequest.includes("fessa") || userRequest.includes("famiglia") || userRequest.includes("Famiglia") || userRequest.includes("Fessa"))){
     message.channel.send({files: [fabrizio]})
-  }/* else if(userRequest === 'michele dragonetti'){
+  }else if(userRequest === 'sound'){
+    player.play(resource)
+  }
+  
+  
+  /* else if(userRequest === 'michele dragonetti'){
     message.channel.send({file: [micheleDragonetti]})
   } */
 });
