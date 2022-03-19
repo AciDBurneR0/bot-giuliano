@@ -1,6 +1,5 @@
 const { Client, Intents, MessageAttachment } = require("discord.js");
-const { joinVoiceChannel, createAudioResource } = require('@discordjs/voice');
-const voiceDiscord = require('@discordjs/voice');
+const { createAudioResource } = require('@discordjs/voice');
 const Discord = require('discord.js');
 const { DisTube } = require('distube');
 const { createAudioPlayer } = require('@discordjs/voice');
@@ -56,6 +55,7 @@ client.on('ready', () => {
 })
 
 client.on('messageCreate', async message => {
+  if(message.author.username != "Warcharoth"){
   if (message.author.bot || !message.guild) return
   const prefix = config.prefix
   if (!message.content.startsWith(prefix)) return
@@ -72,6 +72,7 @@ client.on('messageCreate', async message => {
     console.error(e)
     message.channel.send(`${client.emotes.error} | Error: \`${e}\``)
   }
+}
 })
 /*  | Filter: \`${queue.filters.join(', ') || 'Off'}\` | Loop: \`${
     queue.repeatMode ? (queue.repeatMode === 2 ? 'All Queue' : 'This Song') : 'Off'
