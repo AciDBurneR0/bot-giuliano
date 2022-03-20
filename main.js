@@ -221,6 +221,8 @@ client.on("messageCreate", (message) => {
     message.channel.send({ files: [magname] });
   }else if(message.author.username === "TheMeger10" && (userRequest.includes("fessa") || userRequest.includes("famiglia") || userRequest.includes("Famiglia") || userRequest.includes("Fessa"))){
     message.channel.send({files: [fabrizio]})
+
+  //TO DO Fixare
   }else if(userRequest === 'sound'){
     player.play(resource)
   }
