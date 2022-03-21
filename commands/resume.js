@@ -1,5 +1,6 @@
 module.exports = {
   name: 'riprendi',
+  category: 'musica',
   aliases: ['resume', 'ricomincia'],
   inVoiceChannel: true,
   run: async (client, message) => {

@@ -1,5 +1,6 @@
 module.exports = {
   name: 'ripeti',
+  category: 'musica',
   aliases: ['loop', 'ancora'],
   inVoiceChannel: true,
   run: async (client, message, args) => {

@@ -36,7 +36,9 @@ client.distube = new DisTube(client, {
 })
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
+
 client.emotes = config.emoji
+
 
 fs.readdir('./commands/', (err, files) => {
   if (err) return console.log('Could not find any commands!')
@@ -62,6 +64,7 @@ client.on('messageCreate', async message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g)
   const command = args.shift().toLowerCase()
   const cmd = client.commands.get(command) || client.commands.get(client.aliases.get(command))
+  
   if (!cmd) return
   if (cmd.inVoiceChannel && !message.member.voice.channel) {
     return message.channel.send(`${client.emotes.error} | You must be in a voice channel!`)
@@ -192,12 +195,12 @@ client.on("messageCreate", (message) => {
 
   console.log(userRequest);
 
-  if (userRequest === `${prefix}daje?`) {
+  if (userRequest === `${config.prefix} daje?`) {
     botResponse.send("eh si daje!");
-  } else if (userRequest === `${prefix}annamo a scopa?`) {
+  } else if (userRequest === `${config.prefix} annamo a scopa?`) {
     botResponse.send("Per forza annamo a scopa, culo pronto?");
-  } else if (userRequest.startsWith(`${prefix}server`)) {
-    botResponse.send(`Il nome del server dovrebbe esse ${message.guild.name}`);
+  } else if (userRequest.startsWith(`${config.prefix} ndo cazzo sto`)) {
+    botResponse.send(`Dovresti sta ner server ${message.guild.name}`);
   } else if (userRequest.includes("chi sono")) {
     botResponse.send(
       `Tu dovresti essere quello stronzo rotto n'culo de ${message.author.username}`

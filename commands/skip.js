@@ -1,5 +1,6 @@
 module.exports = {
   name: 'prossima',
+  category: 'musica',
   inVoiceChannel: true,
   run: async (client, message) => {
     const queue = client.distube.getQueue(message)
