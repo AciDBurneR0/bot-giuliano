@@ -1,5 +1,6 @@
 module.exports = {
   name: 'volume',
+  category: 'musica',
   aliases: ['v', 'set', 'set-volume'],
   inVoiceChannel: true,
   run: async (client, message, args) => {
